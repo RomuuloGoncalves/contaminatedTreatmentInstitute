@@ -1,0 +1,419 @@
+* {
+    margin: 0%;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+main.blur {
+    filter: blur(10px);
+}
+header,
+footer {
+    min-height: 70px;
+    display: flex;
+
+    background-color: rgb(10, 109, 10);
+    color: white;
+}
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+    box-shadow: 1px 1px 10px rgb(32, 32, 32);
+    box-shadow: 0.5px 0.5px 15px rgb(32, 32, 32);
+}
+
+h1 {
+    flex: 0 1 auto;
+}
+
+h1.media{
+    display: none;
+}
+
+header a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+a.media {
+    display: none;
+}
+
+ion-icon {
+    margin-left: 10px;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.campo span{
+    color: red;
+}
+
+.campo input.erro {
+    border: 1px solid red;
+}
+
+.adicionar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    margin-top: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.boasVindas{
+    
+    margin-top: 10px !important;
+    min-height: 35vh;
+    margin: auto;
+    background-color: rgb(140, 207, 140);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90vw;
+    border-radius: 10px;
+    color: rgb(49, 47, 47);
+    flex-wrap: wrap;
+
+}
+span.dados{
+    margin-left: -15px;
+}
+.boasVindas .dadosPagina{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.boasVindas p{
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    padding: 10px;
+}
+.boasVindas ul{
+    margin-left: 60px;
+}
+.boasVindas ul li{
+    margin: 5px;
+}
+
+#fichaCadastro {
+    display: none;
+}
+
+#fichaCadastro.ativar {
+    min-height: 80vh;
+    width: 50vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    padding: 20px;
+
+    background-image: radial-gradient( circle farthest-corner at 1.3% 2.8%,  rgba(239,249,249,1) 0%, rgba(182,199,226,1) 100.2% );    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background-image: linear-gradient( 117deg,  rgba(57, 129, 38, 0.596) 39.2%, rgba(255,255,255,1) 156.2% );
+    background-image: radial-gradient( circle farthest-corner at 50.7% 54%,  rgba(132, 206, 53, 0.747) 0%, rgb(161, 224, 60) 92.4% );
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.fechar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.fechar ion-icon {
+    font-size: 24px;
+    background-color: #ee4343;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0px;
+}
+.campo label,
+.campo input {
+    flex: 1 1 0px;
+}
+.campo label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.campo input {
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.288);
+    box-shadow: 1px 1px 6px rgba(76, 98, 170, 0.712);
+    min-height: 18px;
+    max-height: 19px;
+    border: 1px solid transparent;
+    padding-left: 1px;
+    outline: 0;
+    width: 100%;
+}
+.btn {
+    background-color: transparent;
+    align-self: center;
+    position: relative;
+    display: block;
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: "montserrat";
+    text-decoration: none;
+    border: 2px solid #ff7675;
+    border: 2px solid green;
+    padding: 14px 20px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color:  white;
+}
+.btn::before {
+    background: #ff7675;
+    background: green;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    
+    transition: all 0.6s ease;
+}
+
+.btn1::before {
+    width: 0%;
+    height: 100%;
+}
+
+.btn1:hover::before {
+    width: 100%;
+}
+.botaoMudar {
+    background-color: rgb(113, 148, 54);
+    color: white;
+    font-weight: 6  00;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 1 1 auto;
+    word-break: break-all;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 5px;
+    height: 100%;
+    flex-grow: 1;
+    padding-left: 2%;
+    color: rgb(36, 56, 5);
+}
+
+h4 {
+    margin-bottom: 20px;
+}
+
+.grupoBotao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+hr{
+    margin-top: 4px;
+    margin-bottom: 4px;
+ 
+    box-shadow: none;
+    outline: 0;
+    border: none;
+    border-top: 0.5px solid rgba(17, 17, 17, 0.182);
+}
+
+.nav_tabs {
+    background-color: transparent;
+}
+.nav_tabs ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_tabs ul {
+    list-style: none;
+}
+
+.nav_tabs ul li {
+    float: left;
+}
+
+.tab_label {
+    text-align: center;
+    display: flex;
+    width: 70%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: #e54e43;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-top: 1px solid black;
+    word-break: break-all;
+}
+
+.nav_tabs .rd_tab {
+    display: none;
+    
+}
+
+.nav_tabs .rd_tab:checked ~ label {
+    background-color: rgba(121, 179, 35, 0.856) ;
+    color: white;
+}
+
+.tab-content {
+    border: solid 5px rgba(121, 179, 35, 0.856);
+    background-color: rgba(245, 222, 179, 0.747);
+    display: none;
+    width: max-content;
+    left: 0;
+}
+
+.rd_tab:checked ~ .tab-content {
+    display: block;
+    width: 80vw;
+    border: 1px solid rgba(121, 179, 35, 0.856);
+}
+.tab-content h2 {
+    padding: 10px;
+    color: rgb(58, 54, 54);
+    font-weight: 500;
+    word-wrap: break-word;
+
+}
+.tab-content article {
+    word-wrap: break-word;
+    padding: 10px;
+    color: rgb(37, 36, 36);
+
+    background-color: rgba(121, 179, 35, 0.466);
+}
+
+@media(max-width:800px){
+    #fichaCadastro.ativar {
+        width: 80vw;
+        margin-top: 2%;
+        width: 80vw;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    body{
+        min-height: 120vh;
+    }
+
+
+.boasVindas{
+    flex-direction: column;
+
+}
+
+.boasVindas h1{
+    margin-top: 5px;
+
+}
+
+.boasVindas .dadosPagina{
+    width: 100%;
+}
+
+span.dados{
+    margin-left: -15px;
+}
+
+.boasVindas p{
+    margin:auto;
+    text-align: justify;
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    width: 90%;
+}
+.boasVindas ul{
+    margin-left: 40px;
+}
+
+}
+
+@media (max-width: 600px) {
+    h1#instituto{
+        display: none;
+    }
+
+    h1.media{
+        display: block;
+    }
+    a.adicionar {
+        display: none;
+    }
+
+    a.media {
+        display: flex;
+
+    }
+
+
+    .tab_label {
+        width: 85%;
+    }
+
+    .rd_tab:checked ~ .tab-content {
+        width: 95vw;
+    }
+}
+
